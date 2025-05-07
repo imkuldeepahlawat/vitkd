@@ -16,7 +16,7 @@ Mocking up web app with <b>Vital</b><sup><em>(speed)</em></sup><br>
 
 ## Features
 
-- ⚡️ [React 18](https://beta.reactjs.org/)
+- ⚡️ [React 19](https://react.dev/)
 - 🦾 TypeScript, of course
 - 🎨 [Tailwind](https://tailwindcss.com/) - next generation utility-first CSS
 - 👑 [Atomic Design organization](https://bradfrost.com/blog/post/atomic-web-design/)
