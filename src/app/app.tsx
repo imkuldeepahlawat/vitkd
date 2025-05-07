@@ -9,60 +9,61 @@ import {
   Bars3Icon,
   PencilIcon,
   PhotoIcon,
+  SparklesIcon,
+  RocketLaunchIcon,
+  CodeBracketIcon,
+  CommandLineIcon,
 } from "@heroicons/react/24/outline";
 import Button from "components/atoms/button";
 import CopyButton from "components/molecules/copy-button";
+import { motion } from "framer-motion";
 
 const features = [
   {
-    name: "Vite",
-    description:
-      "Faster and leaner development experience for modern web projects.",
-    logo: CubeTransparentIcon,
+    name: "Lightning Fast",
+    description: "Experience development at the speed of thought with Vite's instant server start.",
+    logo: RocketLaunchIcon,
     docs: "https://vitejs.dev/",
   },
   {
-    name: "React",
-    description: "JavaScript library for building user interfaces.",
-    logo: PencilIcon,
+    name: "Modern React",
+    description: "Build with confidence using the latest React features and best practices.",
+    logo: SparklesIcon,
     docs: "https://reactjs.org/",
   },
   {
-    name: "TypeScript",
-    description:
-      "Strongly typed programming language that builds on JavaScript.",
-    logo: BookmarkIcon,
+    name: "Type Safety",
+    description: "Write better code with TypeScript's powerful type system and intelligent tooling.",
+    logo: CodeBracketIcon,
     docs: "https://www.typescriptlang.org/",
   },
   {
-    name: "Tailwind",
-    description: "A utility-first CSS framework packed with classes.",
+    name: "Beautiful Design",
+    description: "Create stunning interfaces with Tailwind's utility-first approach.",
     logo: PhotoIcon,
     docs: "https://tailwindcss.com/",
   },
   {
-    name: "ESLint",
-    description: "Find and fix problems in your JavaScript code.",
+    name: "Code Quality",
+    description: "Maintain pristine code with ESLint's intelligent linting.",
     logo: BeakerIcon,
     docs: "https://eslint.org/",
   },
   {
-    name: "Prettier",
-    description: "An opinionated code formatter.",
-    logo: Bars3Icon,
+    name: "Perfect Formatting",
+    description: "Keep your codebase consistent with Prettier's opinionated formatting.",
+    logo: CommandLineIcon,
     docs: "https://prettier.io/",
   },
   {
-    name: "Atomic design",
-    description:
-      "We’re not designing pages, we’re designing systems of components.",
+    name: "Scalable Architecture",
+    description: "Build maintainable systems with Atomic Design principles.",
     logo: PhoneXMarkIcon,
     docs: "https://bradfrost.com/blog/post/atomic-web-design/",
   },
   {
-    name: "Relative imports",
-    description:
-      "Import resource using its full path from the project’s src folder.",
+    name: "Clean Imports",
+    description: "Simplify your imports with absolute paths from the project root.",
     logo: ChevronDownIcon,
     docs: "https://github.com/vitejs/vite/issues/88#issuecomment-762415200",
   },
@@ -70,57 +71,97 @@ const features = [
 
 function App() {
   return (
-    <main>
-      <header className="pt-16 z-10 relative max-w-screen-lg xl:max-w-screen-xl mx-auto">
-        <h3 className="text-2xl sm:text-4xl leading-none font-bold tracking-tight text-purple-200">
-          <span className="text-[gold] opacity-75">Vital</span> @ Vite Template
-        </h3>
-        <h1 className="text-6xl lg:text-7xl leading-none font-extrabold tracking-tight mb-8 sm:mb-10 text-purple-400">
-          React + TypeScript + Tailwind
-        </h1>
-        <p className="max-w-screen-lg text-lg sm:text-xl  text-gray-300 font-medium mb-10 sm:mb-11">
-          Bootstrap your web projects faster than ever. Comes with:{" "}
-          <code className="font-mono text-blue-500 font-bold">CSS-Modules</code>
-          , <code className="font-mono text-blue-500 font-bold">Jest</code>,{" "}
-          <code className="font-mono text-blue-500 font-bold">Husky</code>,{" "}
-          <code className="font-mono text-blue-500 font-bold">Commit-lint</code>
-          , <code className="font-mono text-blue-500 font-bold">ESLint</code>,{" "}
-          <code className="font-mono text-blue-500 font-bold">Prettier</code>{" "}
-          and{" "}
-          <code className="font-mono text-blue-500 font-bold">
-            Atomic organization for components
-          </code>
-          . Configured and ready to go.
-        </p>
-        <div className="absolute top-12 right-12 opacity-10 lg:opacity-50">
-          <Logos.Vite className="w-56 h-56" />
-        </div>
-      </header>
-      <section className="max-w-screen-lg xl:max-w-screen-xl mx-auto">
-        <div className="sm:flex sm:space-x-6 space-y-4 sm:space-y-0 items-center">
-          <a href="https://github.com/imkuldeepahlawat/vitkd">
-            <Button>Visit on Github</Button>
-          </a>
-          <CopyButton text="npx degit imkuldeepahlawat/vitkd my-vitkd-app" />
-        </div>
-      </section>
-      <section className="max-w-screen-lg xl:max-w-screen-xl mx-auto grid grid-cols-10 gap-4">
-        {features.map((props, index) => (
-          <div key={index} className="col-span-10 sm:col-span-5">
-            <Card
-              title={props.name}
-              description={props.description}
-              Icon={props.logo}
-              href={props.docs}
-            />
+    <main className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-black to-black" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f46e5/0.1,#4f46e5/0.1),linear-gradient(to_right,#4f46e5/0.1,#4f46e5/0.1)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative"
+      >
+        <header className="pt-24 z-10 relative max-w-screen-lg xl:max-w-screen-xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+          >
+            <h3 className="text-3xl sm:text-5xl leading-none font-bold tracking-tight text-gray-200 mb-4">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+                Vital
+              </span>
+              <span className="text-gray-400"> — The Future of Web Development</span>
+            </h3>
+            <h1 className="text-5xl lg:text-7xl leading-none font-extrabold tracking-tight mb-8 sm:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+              Build Better. Build Faster.
+            </h1>
+            <p className="max-w-screen-lg text-xl sm:text-2xl text-gray-300 font-medium mb-10 sm:mb-11 leading-relaxed">
+              A modern React template that combines the best tools and practices. 
+              <span className="block mt-4 text-gray-400">
+                Ready to ship. Zero configuration. Maximum productivity.
+              </span>
+            </p>
+          </motion.div>
+          <div className="absolute top-12 right-12 opacity-10 lg:opacity-50">
+            <Logos.Vite className="w-56 h-56" />
           </div>
-        ))}
-      </section>
-      <footer className="pb-16 max-w-screen-lg xl:max-w-screen-xl mx-auto text-center sm:text-right text-gray-400 font-bold">
-        <a href="https://github.com/imkuldeepahlawat">
-          Kuldeep Ahlawat @ {new Date().getFullYear()}
-        </a>
-      </footer>
+        </header>
+
+        <motion.section 
+          className="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+        >
+          <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0 items-center">
+            <a href="https://github.com/imkuldeepahlawat/vitkd" className="w-full sm:w-auto">
+              <Button className="w-full sm:w-auto bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 px-2 py-2 rounded-md">
+                Get Started on GitHub
+              </Button>
+            </a>
+            <CopyButton text="npx degit imkuldeepahlawat/vitkd my-vital-app" />
+          </div>
+        </motion.section>
+
+        <motion.section 
+          className="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+        >
+          {features.map((props, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
+            >
+              <Card
+                title={props.name}
+                description={props.description}
+                Icon={props.logo}
+                href={props.docs}
+              />
+            </motion.div>
+          ))}
+        </motion.section>
+
+        <motion.footer 
+          className="pb-16 max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 text-center sm:text-right text-gray-400 font-medium"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+        >
+          <a 
+            href="https://github.com/imkuldeepahlawat"
+            className="hover:text-purple-400 transition-colors duration-300"
+          >
+            Crafted with ❤️ by Kuldeep Ahlawat @ {new Date().getFullYear()}
+          </a>
+        </motion.footer>
+      </motion.div>
     </main>
   );
 }
