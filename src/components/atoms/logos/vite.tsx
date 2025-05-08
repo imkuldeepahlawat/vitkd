@@ -1,4 +1,5 @@
 import { LogosProps } from "components/atoms/logos/index";
+import { JSX } from "react";
 
 const Vite = (props: LogosProps): JSX.Element => {
   return (

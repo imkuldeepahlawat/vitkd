@@ -1,18 +1,14 @@
 import Logos from "components/atoms/logos";
 import Card from "components/organisms/card";
 import {
-  BeakerIcon,
-  BookmarkIcon,
   ChevronDownIcon,
-  CubeTransparentIcon,
-  PhoneXMarkIcon,
-  Bars3Icon,
-  PencilIcon,
   PhotoIcon,
   SparklesIcon,
   RocketLaunchIcon,
   CodeBracketIcon,
   CommandLineIcon,
+  PhoneXMarkIcon,
+  BeakerIcon,
 } from "@heroicons/react/24/outline";
 import Button from "components/atoms/button";
 import CopyButton from "components/molecules/copy-button";
@@ -46,7 +42,7 @@ const features = [
   {
     name: "Code Quality",
     description: "Maintain pristine code with ESLint's intelligent linting.",
-    logo: BeakerIcon,
+logo: BeakerIcon,
     docs: "https://eslint.org/",
   },
   {
@@ -70,6 +66,7 @@ const features = [
 ];
 
 function App() {
+
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background Elements */}
@@ -90,7 +87,7 @@ function App() {
           >
             <h3 className="text-3xl sm:text-5xl leading-none font-bold tracking-tight text-gray-200 mb-4">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-                Vital
+                Vitkd
               </span>
               <span className="text-gray-400"> — The Future of Web Development</span>
             </h3>
@@ -121,7 +118,7 @@ function App() {
                 Get Started on GitHub
               </Button>
             </a>
-            <CopyButton text="npx degit imkuldeepahlawat/vitkd my-vital-app" />
+            <CopyButton text="npx degit imkuldeepahlawat/vitkd my-vitkd-app" />
           </div>
         </motion.section>
 

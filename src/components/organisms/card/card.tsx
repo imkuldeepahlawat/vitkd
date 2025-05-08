@@ -1,20 +1,18 @@
 import {
   forwardRef,
-  ComponentProps,
   RefAttributes,
   ForwardRefExoticComponent,
   SVGProps,
 } from "react";
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 
-export interface CardProps
-  extends Omit<ComponentProps<"div">, "className" | "children"> {
+export interface CardProps extends Omit<HTMLMotionProps<"div">, "children"> {
   title: string;
   description: string;
   Icon: ForwardRefExoticComponent<
     Omit<SVGProps<SVGSVGElement>, "ref"> & {
-      title?: string | undefined;
-      titleId?: string | undefined;
+      title?: string;
+      titleId?: string;
     } & RefAttributes<SVGSVGElement>
   >;
   href: string;
