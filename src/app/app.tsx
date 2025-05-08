@@ -1,78 +1,100 @@
-import Logos from "components/atoms/logos";
-import Card from "components/organisms/card";
+import Logos from 'components/atoms/logos';
+import Card from 'components/organisms/card';
 import {
-  ChevronDownIcon,
   PhotoIcon,
   SparklesIcon,
   RocketLaunchIcon,
   CodeBracketIcon,
   CommandLineIcon,
-  PhoneXMarkIcon,
   BeakerIcon,
-} from "@heroicons/react/24/outline";
-import Button from "components/atoms/button";
-import CopyButton from "components/molecules/copy-button";
-import { motion } from "framer-motion";
+  ShieldCheckIcon,
+  DocumentCheckIcon,
+  CubeIcon,
+} from '@heroicons/react/24/outline';
+import Button from 'components/atoms/button';
+import CopyButton from 'components/molecules/copy-button';
+import { motion } from 'framer-motion';
 
 const features = [
   {
-    name: "Lightning Fast",
-    description: "Experience development at the speed of thought with Vite's instant server start.",
+    name: 'Lightning Fast',
+    description:
+      "Experience development at the speed of thought with Vite's instant server start and HMR.",
     logo: RocketLaunchIcon,
-    docs: "https://vitejs.dev/",
+    docs: 'https://vitejs.dev/',
   },
   {
-    name: "Modern React",
-    description: "Build with confidence using the latest React features and best practices.",
+    name: 'React 19',
+    description:
+      'Build with confidence using the latest React 19 features, hooks, and best practices.',
     logo: SparklesIcon,
-    docs: "https://reactjs.org/",
+    docs: 'https://react.dev/',
   },
   {
-    name: "Type Safety",
-    description: "Write better code with TypeScript's powerful type system and intelligent tooling.",
+    name: 'TypeScript',
+    description:
+      "Write better code with TypeScript's powerful type system, strict mode, and intelligent tooling.",
     logo: CodeBracketIcon,
-    docs: "https://www.typescriptlang.org/",
+    docs: 'https://www.typescriptlang.org/',
   },
   {
-    name: "Beautiful Design",
-    description: "Create stunning interfaces with Tailwind's utility-first approach.",
+    name: 'Tailwind CSS',
+    description:
+      "Create stunning interfaces with Tailwind's utility-first approach and modern design system.",
     logo: PhotoIcon,
-    docs: "https://tailwindcss.com/",
+    docs: 'https://tailwindcss.com/',
   },
   {
-    name: "Code Quality",
-    description: "Maintain pristine code with ESLint's intelligent linting.",
-logo: BeakerIcon,
-    docs: "https://eslint.org/",
+    name: 'Testing Ready',
+    description:
+      'Write reliable tests with Vitest and React Testing Library, including coverage reports.',
+    logo: BeakerIcon,
+    docs: 'https://vitest.dev/',
   },
   {
-    name: "Perfect Formatting",
-    description: "Keep your codebase consistent with Prettier's opinionated formatting.",
+    name: 'Code Quality',
+    description:
+      "Maintain pristine code with ESLint's intelligent linting and Prettier's formatting.",
+    logo: BeakerIcon,
+    docs: 'https://eslint.org/',
+  },
+  {
+    name: 'Atomic Design',
+    description:
+      'Build maintainable systems with Atomic Design principles and scalable architecture.',
+    logo: CubeIcon,
+    docs: 'https://bradfrost.com/blog/post/atomic-web-design/',
+  },
+  {
+    name: 'Git Hooks',
+    description:
+      'Enforce code quality with Husky, lint-staged, and commit-lint for consistent commits.',
+    logo: ShieldCheckIcon,
+    docs: 'https://typicode.github.io/husky/',
+  },
+  {
+    name: 'Modern Tooling',
+    description:
+      'Development workflow with hot reloading, path aliases, and optimized builds.',
     logo: CommandLineIcon,
-    docs: "https://prettier.io/",
+    docs: 'https://vitejs.dev/guide/',
   },
   {
-    name: "Scalable Architecture",
-    description: "Build maintainable systems with Atomic Design principles.",
-    logo: PhoneXMarkIcon,
-    docs: "https://bradfrost.com/blog/post/atomic-web-design/",
-  },
-  {
-    name: "Clean Imports",
-    description: "Simplify your imports with absolute paths from the project root.",
-    logo: ChevronDownIcon,
-    docs: "https://github.com/vitejs/vite/issues/88#issuecomment-762415200",
+    name: 'Production Ready',
+    description:
+      'Zero-config deployment with Vercel, optimized builds, and modern browser support.',
+    logo: DocumentCheckIcon,
+    docs: 'https://vercel.com',
   },
 ];
 
 function App() {
-
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-black to-black" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f46e5/0.1,#4f46e5/0.1),linear-gradient(to_right,#4f46e5/0.1,#4f46e5/0.1)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
-      
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -89,15 +111,23 @@ function App() {
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
                 Vitkd
               </span>
-              <span className="text-gray-400"> — The Future of Web Development</span>
+              <span className="text-gray-400">
+                {' '}
+                — The Future of Web Development
+              </span>
             </h3>
             <h1 className="text-5xl lg:text-7xl leading-none font-extrabold tracking-tight mb-8 sm:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
               Build Better. Build Faster.
             </h1>
             <p className="max-w-screen-lg text-xl sm:text-2xl text-gray-300 font-medium mb-10 sm:mb-11 leading-relaxed">
-              A modern React template that combines the best tools and practices. 
+              A modern React template that combines the best tools and practices
+              for 2024.
               <span className="block mt-4 text-gray-400">
                 Ready to ship. Zero configuration. Maximum productivity.
+              </span>
+              <span className="block mt-4 text-gray-400">
+                Built with React 19, TypeScript, Tailwind CSS, and modern
+                tooling.
               </span>
             </p>
           </motion.div>
@@ -106,14 +136,17 @@ function App() {
           </div>
         </header>
 
-        <motion.section 
+        <motion.section
           className="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
           <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0 items-center">
-            <a href="https://github.com/imkuldeepahlawat/vitkd" className="w-full sm:w-auto">
+            <a
+              href="https://github.com/imkuldeepahlawat/vitkd"
+              className="w-full sm:w-auto"
+            >
               <Button className="w-full sm:w-auto bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 px-2 py-2 rounded-md">
                 Get Started on GitHub
               </Button>
@@ -122,8 +155,8 @@ function App() {
           </div>
         </motion.section>
 
-        <motion.section 
-          className="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16"
+        <motion.section
+          className="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
@@ -145,13 +178,13 @@ function App() {
           ))}
         </motion.section>
 
-        <motion.footer 
+        <motion.footer
           className="pb-16 max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 text-center sm:text-right text-gray-400 font-medium"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          <a 
+          <a
             href="https://github.com/imkuldeepahlawat"
             className="hover:text-purple-400 transition-colors duration-300"
           >

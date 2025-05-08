@@ -9,4 +9,4 @@ expect.extend(matchers);
 // Cleanup after each test case (e.g. clearing jsdom)
 afterEach(() => {
   cleanup();
-}); 
+});

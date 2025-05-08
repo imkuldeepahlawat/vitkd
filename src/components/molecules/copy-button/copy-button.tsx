@@ -1,11 +1,11 @@
-import { ComponentProps, forwardRef, useMemo, useState } from "react";
+import { ComponentProps, forwardRef, useMemo, useState } from 'react';
 import {
   CheckCircleIcon,
   DocumentDuplicateIcon,
-} from "@heroicons/react/24/outline";
+} from '@heroicons/react/24/outline';
 
 interface Props
-  extends Omit<ComponentProps<"div">, "className" | "onClick" | "title"> {
+  extends Omit<ComponentProps<'div'>, 'className' | 'onClick' | 'title'> {
   text: string;
 }
 
@@ -20,7 +20,7 @@ const CopyButton = forwardRef<HTMLDivElement, Props>(
       () => (copied ? CheckCircleIcon : DocumentDuplicateIcon),
       [copied]
     );
-    const title = copied ? "Copied" : "Click to copy to clipboard";
+    const title = copied ? 'Copied' : 'Click to copy to clipboard';
 
     return (
       <div
@@ -33,7 +33,7 @@ const CopyButton = forwardRef<HTMLDivElement, Props>(
       >
         <span className="text-gray-900">
           <span className="inline text-gray-500" aria-hidden="true">
-            ${" "}
+            ${' '}
           </span>
           {text}
         </span>

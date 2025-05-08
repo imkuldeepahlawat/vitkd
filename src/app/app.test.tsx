@@ -7,7 +7,9 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByText('Build Better. Build Faster.')).toBeInTheDocument();
     expect(screen.getByText('Vitkd')).toBeInTheDocument();
-    expect(screen.getByText('— The Future of Web Development')).toBeInTheDocument();
+    expect(
+      screen.getByText('— The Future of Web Development')
+    ).toBeInTheDocument();
   });
 
   it('renders all feature cards with correct content', () => {
@@ -20,7 +22,7 @@ describe('App', () => {
       'Code Quality',
       'Perfect Formatting',
       'Scalable Architecture',
-      'Clean Imports'
+      'Clean Imports',
     ];
 
     features.forEach(feature => {
@@ -32,12 +34,17 @@ describe('App', () => {
     render(<App />);
     const button = screen.getByText('Get Started on GitHub');
     expect(button).toBeInTheDocument();
-    expect(button.closest('a')).toHaveAttribute('href', 'https://github.com/imkuldeepahlawat/vitkd');
+    expect(button.closest('a')).toHaveAttribute(
+      'href',
+      'https://github.com/imkuldeepahlawat/vitkd'
+    );
   });
 
   it('renders the copy button with correct command', () => {
     render(<App />);
-    const copyButton = screen.getByText('npx degit imkuldeepahlawat/vitkd my-vitkd-app');
+    const copyButton = screen.getByText(
+      'npx degit imkuldeepahlawat/vitkd my-vitkd-app'
+    );
     expect(copyButton).toBeInTheDocument();
   });
 
@@ -45,13 +52,24 @@ describe('App', () => {
     render(<App />);
     const footer = screen.getByText(/Crafted with ❤️ by Kuldeep Ahlawat/);
     expect(footer).toBeInTheDocument();
-    expect(footer.closest('a')).toHaveAttribute('href', 'https://github.com/imkuldeepahlawat');
+    expect(footer.closest('a')).toHaveAttribute(
+      'href',
+      'https://github.com/imkuldeepahlawat'
+    );
   });
 
   it('renders the description text', () => {
     render(<App />);
-    expect(screen.getByText(/A modern React template that combines the best tools and practices/)).toBeInTheDocument();
-    expect(screen.getByText(/Ready to ship. Zero configuration. Maximum productivity/)).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        /A modern React template that combines the best tools and practices/
+      )
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        /Ready to ship. Zero configuration. Maximum productivity/
+      )
+    ).toBeInTheDocument();
   });
 
   it('renders the Vite logo', () => {
@@ -59,4 +77,4 @@ describe('App', () => {
     const viteLogo = document.querySelector('svg');
     expect(viteLogo).toBeInTheDocument();
   });
-}); 
+});

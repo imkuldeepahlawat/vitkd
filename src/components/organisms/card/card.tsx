@@ -3,14 +3,14 @@ import {
   RefAttributes,
   ForwardRefExoticComponent,
   SVGProps,
-} from "react";
-import { motion, HTMLMotionProps } from "framer-motion";
+} from 'react';
+import { motion, HTMLMotionProps } from 'framer-motion';
 
-export interface CardProps extends Omit<HTMLMotionProps<"div">, "children"> {
+export interface CardProps extends Omit<HTMLMotionProps<'div'>, 'children'> {
   title: string;
   description: string;
   Icon: ForwardRefExoticComponent<
-    Omit<SVGProps<SVGSVGElement>, "ref"> & {
+    Omit<SVGProps<SVGSVGElement>, 'ref'> & {
       title?: string;
       titleId?: string;
     } & RefAttributes<SVGSVGElement>
@@ -28,9 +28,9 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
         {...rest}
       >
         <div className="absolute right-4 top-4">
-          <Icon 
-            className="h-8 w-8 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" 
-            aria-hidden="true" 
+          <Icon
+            className="h-8 w-8 text-purple-400 group-hover:text-purple-300 transition-colors duration-300"
+            aria-hidden="true"
           />
         </div>
         <div className="flex flex-col h-full">
