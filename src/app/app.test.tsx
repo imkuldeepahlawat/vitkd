@@ -16,13 +16,15 @@ describe('App', () => {
     render(<App />);
     const features = [
       'Lightning Fast',
-      'Modern React',
-      'Type Safety',
-      'Beautiful Design',
+      'React 19',
+      'TypeScript',
+      'Tailwind CSS',
+      'Testing Ready',
       'Code Quality',
-      'Perfect Formatting',
-      'Scalable Architecture',
-      'Clean Imports',
+      'Atomic Design',
+      'Git Hooks',
+      'Modern Tooling',
+      'Production Ready',
     ];
 
     features.forEach(feature => {
